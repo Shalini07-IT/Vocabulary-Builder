@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vocabulary Builder</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<header>
+  <h1>📚 Vocabulary Builder</h1>
+
+  <div class="stats">
+    <div class="card">Words: <span id="total">0</span></div>
+    <div class="card">Mastered: <span id="mastered">0</span></div>
+    <div class="card">Strong: <span id="strong">0</span></div>
+    <div class="card">Weak: <span id="weak">0</span></div>
+  </div>
+</header>
+
+<section class="controls">
+  <input id="word" placeholder="Word"/>
+  <input id="meaning" placeholder="Meaning"/>
+  <input id="example" placeholder="Example sentence"/>
+  <button onclick="addWord()">Add Word</button>
+</section>
+
+<section class="actions">
+  <button onclick="startQuiz()">🎯 Start Quiz</button>
+  <button onclick="dailyWord()">🌟 Daily Word</button>
+</section>
+
+<main id="list"></main>
+
+<!-- QUIZ MODAL -->
+<div id="quiz" class="modal hidden">
+  <div class="box">
+    <h2 id="qWord"></h2>
+    <input id="answer" placeholder="Type meaning..."/>
+    <button onclick="checkAnswer()">Check</button>
+    <p id="result"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
