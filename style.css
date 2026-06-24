@@ -1,0 +1,123 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui;}
+
+body{
+  background:#0f1020;
+  color:white;
+  overflow-x:hidden;
+}
+
+.bg{
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle at 20% 20%,#7f00ff33,#000),
+             radial-gradient(circle at 80% 80%,#00d4ff33,#000);
+  filter:blur(40px);
+  z-index:-1;
+}
+
+header{
+  text-align:center;
+  padding:20px;
+}
+
+h1{
+  background:linear-gradient(90deg,#7f00ff,#00d4ff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.stats{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:10px;
+}
+
+.card{
+  background:rgba(255,255,255,0.08);
+  padding:10px 15px;
+  border-radius:12px;
+  backdrop-filter:blur(10px);
+}
+
+.controls{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  padding:15px;
+  flex-wrap:wrap;
+}
+
+input{
+  padding:10px;
+  border:none;
+  border-radius:10px;
+  background:rgba(255,255,255,0.1);
+  color:white;
+  outline:none;
+}
+
+button{
+  padding:10px 15px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(90deg,#7f00ff,#00d4ff);
+  color:white;
+  cursor:pointer;
+}
+
+.actions{
+  text-align:center;
+  margin-bottom:10px;
+}
+
+main{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+  padding:20px;
+}
+
+.word{
+  background:rgba(255,255,255,0.08);
+  padding:15px;
+  border-radius:15px;
+  backdrop-filter:blur(10px);
+  animation:fade 0.4s ease;
+}
+
+@keyframes fade{
+  from{opacity:0;transform:translateY(10px)}
+}
+
+.tag{
+  display:inline-block;
+  padding:3px 8px;
+  border-radius:8px;
+  font-size:12px;
+  margin-top:5px;
+}
+
+.mastered{background:#00ff8844;}
+.strong{background:#00d4ff44;}
+.weak{background:#ff4d4d44;}
+
+.modal{
+  position:fixed;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:rgba(0,0,0,0.6);
+}
+
+.hidden{display:none;}
+
+.box{
+  background:rgba(255,255,255,0.1);
+  padding:20px;
+  border-radius:15px;
+  backdrop-filter:blur(15px);
+  text-align:center;
+}
